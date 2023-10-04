@@ -1,0 +1,322 @@
+@font-face {
+    font-family: titulo;
+    src: url(./fonts/EngelVoelkersHead_Rg.ttf);
+}
+
+@font-face {
+    font-family: subtitulo;
+    src: url(./fonts/EngelVoelkersText_Rg.ttf);
+}
+
+.titulo{
+    font-family: titulo;
+}
+.subtitulo{
+    font-family: subtitulo;
+}
+.btn-rojo{
+    background-color: #B01004;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-decoration: none;
+    color: white;
+}
+.btn-rojo:hover{
+    background-color: #910F05;
+    color: white;
+}
+.btn-beige{
+    background-color: #F8F5F0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-decoration: none;
+    color: black;
+}
+.btn-beige:hover{
+    background-color: #585858;
+    color: white;
+}
+.bg-beige{
+    background-color: #F8F5F0;
+}
+.cardDevelopment:hover{
+    filter: brightness(1.1);
+}
+.text-red{
+    color: #B01004;
+}
+.news-line {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+#menuBurgerMovil{
+    display: none;
+}
+#logoMovil{
+    display: none;
+}
+
+/* Estilos para el texto de las noticias */
+.news-text {
+    display: inline-block;
+    padding: 0 10px; /* Espacio entre palabras */
+    animation: marquee 20s linear infinite; /* Velocidad y bucle infinito */
+}
+
+/* Animación de desplazamiento */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.nav-hover-red:hover{
+    color: #B01004 !important;
+}
+#menu{
+    width: 30%;
+    height: auto;
+    min-height: 180vh;
+    left: 70%;
+    z-index: 1999;
+    background-color: white;
+}
+#cerrarMenu:hover{
+    cursor: pointer;
+}
+.hoverRojo:hover{
+    color: #B01004;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1250px) {
+    #navbar{
+        display: none;
+    }
+    #inputLanding{
+        font-size: .8rem;
+    }
+    #tipoBusqueda{
+        width: 100% !important;
+        flex-direction: column;
+    }
+    #botonesLanding{
+        width: 84% !important;
+    }
+    #sticky{
+        width: 100% !important;
+    }
+    #background{
+        margin-top: -69% !important;
+    }
+    .news-line{
+        margin-top: -58.1% !important;
+    }
+    #lupa{
+        top: 35% !important;
+        left: 69% !important;
+    }
+    #divLanding{
+        flex-direction: row !important;
+        height: auto !important;
+    }
+    #divLanding div{
+        width: 90% !important;
+        height: auto !important;
+    }
+    #smadarLanding{
+        width: 100%;
+    }
+    .titulo{
+        margin-left: 0% !important;
+    }
+    #tituloLanding{
+        margin-left: 0% !important;
+        width: 80% !important;
+    }
+    #tituloLanding p{
+        font-size: 1.2rem !important;
+    }
+    #caracteristicasLuxury{
+        width: 80% !important;
+    }
+    #caracteristicasLuxury a{
+        font-size: .8rem !important;
+        align-items: flex-start !important;
+    }
+    #divLuxury{
+        background-position: 45%;
+    }
+    #divCarrusel{
+        flex-direction: column !important;
+        overflow-x: hidden;
+        height: auto !important;
+    }
+    #divCarrusel div{
+        width: 80% !important;
+        margin-top: 2%;
+        height: 35vh !important;
+    }
+    #divCards{
+        margin-top: 70% !important;
+    }
+    .cardDevelopment p{
+        font-size: .8rem !important;
+    }
+    .cardDevelopment{
+        width: 80% !important;
+    }
+    #divTextTeam{
+        width: 90% !important;
+    }
+    #divTextTeam div{
+        width: 90% !important;
+    }
+    #divTextTeam div a{
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    #divTeam{
+        background-position: 35%;
+    }
+    #divUnveiling{
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    #divUnveiling div{
+        width: 90% !important;
+    }
+    #imgUnveiling{
+        background-position: 40% !important;
+    }
+    #buttonUnveiling{
+        margin-left: -95%;
+        margin-top: 180%;
+    }
+    #tituloUnveiling{
+        margin-left: 0% !important;
+        margin-top: 10% !important;
+    }
+    #divProperties{
+        flex-direction: row !important;
+        justify-content: center !important;
+        height: auto !important;
+        margin-top: 5% !important;
+
+    }
+    #desapareceProperty{
+        display: none !important;
+    }
+    #desapareceProperty2{
+        display: none !important;
+    }
+    #seQueda{
+        width: 100% !important;
+    }
+    #subDivBlog{
+        width: 100% !important;
+    }
+    #div2Blog{
+        width: 100% !important;
+        flex-direction: row !important;
+    }
+    #divBlog{
+        margin-bottom: 200%;
+        margin-top: 20% !important;
+    }
+    #textBlog{
+        font-size: .8rem;
+    }
+    #divMiniBlogs{
+        width: 100% !important;
+    }
+    .cardDevelopment{
+        width: 100% !important;
+        margin-top: 4%;
+    }
+    #tituloBlog{
+        justify-content:center !important ;
+        width: 100% !important;
+    }
+    #divNews{
+        width: 100% !important;
+    }
+    #email{
+        width: 90% !important;
+    }
+    #divFooter{
+        height: auto !important;
+        flex-direction: row !important;
+    }
+    #logoFooter{
+        width: 130% !important;
+    }
+    #divFlexFooter{
+        flex-direction: column !important;
+    }
+    #divFlexFooter>div{
+        width: 100% !important;
+    }
+    #textFooter{
+        height: auto !important;
+        width: 70% !important;
+    }
+    #textFooter p{
+        width: 100% !important;
+    }
+    #movilFooter{
+        text-decoration: none !important;
+        margin-left: 8% !important;
+    }
+    #emailFooter{
+        text-decoration: none !important;
+        margin-left: 8% !important;
+    }
+    #emailFooter p{
+        font-size: 1.1rem !important;
+    }
+    #divSubMenuFooter{
+        width: 100% !important;
+        justify-content:flex-start !important ;
+    }
+    #divSubMenuFooter div{
+        width: 100% !important;
+        margin-left: 25% !important;
+    }
+    #oscuroFooter div{
+        flex-direction: column !important;
+    }
+    #redes{
+        flex-direction: row !important;
+        width: 80% !important;
+        margin-bottom: 20% !important;
+    }
+    #areasFooter{
+        margin-bottom: 10% !important;
+    }
+    #menuBurgerMovil{
+        display: flex;
+        position: absolute !important;
+        top: 5%;
+        left: 80%;
+        color: white;
+        font-size: 3rem !important;
+    }
+    #logoMovil{
+        display: flex;
+        position: absolute !important;
+        top: 6.5%;
+        left: 14%;
+        width: 50%;
+    }
+  }

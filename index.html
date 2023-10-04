@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engel & Völkers Marbella</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+
+    <!-- MENU LATERAL -->
+    <div id="menu" style="display: none; position: absolute;">
+        <div class=" d-flex flex-wrap flex-column justify-content-start align-items-start w-100">
+            <div class="d-flex flex-wrap flex-column justify-content-start align-items-start w-100 m-5"
+                style="height: 4%;">
+                <i class="bi bi-x-lg fs-4 hoverRojo" id="cerrarMenu"></i>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-start align-items-end"
+                style="width: 100%; height: 70%;">
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo">Home</p>
+                </div>
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo" onclick="toggleSubMenu('propertiesSubMenu')">Properties <i class="bi bi-arrow-down-short"></i></p>
+                    <div id="propertiesSubMenu" class="submenu" style="display: none;">
+                        <p class="fs-5 ms-5 hoverRojo">All Properties</p>
+                        <p class="fs-5 ms-5 hoverRojo">New Developments</p>
+                        <p class="fs-5 ms-5 hoverRojo">Exclusive Listings</p>
+                        <p class="fs-5 ms-5 hoverRojo">The Luxury Collection</p>
+                        <p class="fs-5 ms-5 hoverRojo">Luxury Rentals</p>
+                    </div>
+                </div>
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo">Our Services</p>
+
+                </div>
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo">Guides</p>
+                </div>
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo">About Us</p>
+                </div>
+                <div class="my-2 fs-3" style="width: 80%;">
+                    <p class="hoverRojo">Contact</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------->
+    <i id="menuBurgerMovil" class="bi bi-list fs-1"></i>
+    <img id="logoMovil" src="./img/EV_Logo_white_RGB.png" alt="">
+
+    <div class="d-flex flex-wrap flex-column justify-content-center align-items-center w-100">
+        <div id="sticky" class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+            style="width: 13%; height: 3rem; background-color: #B01004; position: sticky;top: 94.5%;left: 80%;margin-top: -4%; z-index: 9999;">
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                style="width: 25%;height: 100%;">
+                <i class="bi bi-heart fs-3 text-white"></i>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                style="width: 25%;height: 100%;">
+                <i class="bi bi-search fs-3 text-white"></i>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                style="width: 25%;height: 100%;">
+                <i class="bi bi-envelope fs-3 text-white"></i>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                style="width: 25%;height: 100%;">
+                <i class="bi bi-telephone fs-3 text-white"></i>
+            </div>
+        </div>
+
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light" style="position: absolute;top:0%;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-2 nav-hover-red" href="#"><i class="bi bi-globe fs-3"></i></a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3 nav-hover-red subtitulo" href="#"
+                            style="border-bottom: 3px solid rgb(205, 0, 0) ;">HOME</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3 nav-hover-red subtitulo" href="#">PROPERTIES</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3 me-5 nav-hover-red subtitulo" href="#">OUR SERVICES</a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white" href="#">
+                            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                                <img src="./img/EV_Logo_white_RGB.png" style="width: 250px;">
+                                <p class="text-center fs-5 titulo mt-3">The Leading Luxury Real Estate Agency in
+                                    Marbella</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3 ms-5 nav-hover-red subtitulo" href="#">GUIDES</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3 nav-hover-red subtitulo" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white mt-3  nav-hover-red subtitulo" href="#">CONTACT </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-white nav-hover-red" href="#" id="sidebar"><i
+                                class="bi bi-list fs-1"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="botonesLanding" class="d-flex flex-wrap flex-column justify-content-start align-items-start"
+            style="width: 40%; height: 10rem; position: absolute; top: 45%; left: 15%;">
+
+            <div id="tipoBusqueda" class="d-flex flex-wrap flex-row justify-content-start align-items-start"
+                style="height: 30%;">
+                <p class="me-4 text-white subtitulo" style="border-bottom: 4px solid rgb(205, 0, 0) ;">BUY</p>
+                <p class="me-4 text-white subtitulo">RENT</p>
+                <p class="me-4 text-white subtitulo">NEW DEVELOPMENTS</p>
+            </div>
+
+            <div class="d-flex flex-wrap flex-row justify-content-start align-items-start w-100" style="height: 70%;">
+                <div class="bg-white d-flex flex-wrap flex-row justify-content-start align-items-center"
+                    style="width: 80%; height: 50%;">
+                    <input id="inputLanding" style="width: 100%; height: 100%;" class="subtitulo" type="text"
+                        placeholder="    Find a place to call home"><i id="lupa"
+                        style="position: absolute;top: 34%;left: 73%;" class="bi bi-search fs-3 text-red"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- PORTADA -->
+        <div class="d-flex flex-wrap flex-row justify-content-center align-items-center"
+            style="width: 100%;height: 117vh;">
+            <img id="background" src="./img/Imagen Fondo.png"
+                style="width: 100%;height: 100.4vh;margin-top: -6%;"></img>
+            <!-- <video src="./video/pexels-kindel-media-7578552 (Original) - Compressed with FlexClip.mp4"
+                style="width: 100%;height: 100.4vh;margin-top: -6%;" autoplay muted loop style="z-index: -1;"></video> -->
+
+        </div>
+
+        <div class="news-line" style="margin-top: -8.1%;">
+            <div class="news-text subtitulo" style="width: 25rem;">LUXURY VILLAS FOR SALE IN MARBELLA</div>
+            <div class="news-text subtitulo" style="width: 25rem;">EARTH: THE EPITOME OF LUXURY</div>
+            <div class="news-text subtitulo" style="width: 25rem;">THE WORLD'S LEADING REAL ESTATE AGENCY</div>
+            <div class="news-text subtitulo" style="width: 25rem;">EXCEPTIONAL MARKETING CONCEPT FOR PROPERTIES FOR SALE
+                IN
+                MARBELLA</div>
+        </div>
+
+        <!-- LANDING -->
+        <div id="divLanding" class="d-flex flex-wrap flex-row justify-content-around align-items-center w-100 my-5"
+            style="height: 100vh; z-index: 999;">
+
+            <div class="d-flex flex-wrap flex-row justify-content-end align-items-end"
+                style="width: 50%;height: 100vh;">
+                <img id="smadarLanding" src="./img/smadar.png" style="background-size: cover;">
+            </div>
+
+            <div class="d-flex flex-wrap flex-column justify-content-start align-items-start"
+                style="width: 45%;height: 100vh;">
+                <div id="tituloLanding"
+                    class="d-flex flex-wrap flex-column justify-content-start align-items-start mt-5"
+                    style="width: 80%; margin-left: -30%;">
+                    <p class="titulo fs-1">Luxury villas, apartments and penthouses for sale and rent in Marbella</p>
+                </div>
+                <div class="d-flex flex-wrap flex-column justify-content-start align-items-start" style="width: 50%;">
+                    <p class="fs-4 mt-3 mb-4" style="font-weight: 600;color: rgb(174, 174, 174);">ENGEL & VÖLKERS
+                        MARBELLA REAL ESTATE</p>
+                    <p>As the top real estate agency in Marbella for over 20 years, Engel & Völkers offers an exclusive
+                        portfolio of luxury homes for sale and rent. With 6 local shops and an own network of over 900
+                        E&V locations worldwide, we provide entrance to the finest villas, apartments, penthouses and
+                        plots in the most exclusive neighbourhoods in Marbella.</p><br>
+                    <p>Engel & Völkers Marbella offers both home owners and buyers a professionally tailored range of
+                        services. Our dedicated sales force in Marbella have unmatched experience in finding exceptional
+                        high-end properties that align with your vision of luxury.</p><br>
+                    <p>With our experience in selling the most exclusive properties in Marbella as well as around the
+                        globe, Engel & Völkers provides an unparalleled marketing service and access to the largest
+                        existing database of solvent clients.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- THE LUXURY COLLECTION -->
+        <div id="divLuxury" class="d-flex flex-column justify-content-start align-items-center w-100 mt-5"
+            style="background-image: url('./img/luxuryCollection.png'); background-size: cover;background-repeat: no-repeat; height: 100vh;">
+
+            <div class="d-flex flex-column justify-content-start align-items-center w-100 pt-5" style="height: 50%;">
+                <div class="d-flex flex-row justify-content-center align-items-center w-100 text-white">
+                    <p class="fs-1 titulo">The Luxury Collection</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center w-100 text-white">
+                    <p class="fs-5 subtitulo">BY ENGEL & VÖLKERS</p>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column justify-content-start align-items-start w-100" style="height: 50%;">
+                <div id="caracteristicasLuxury" class="d-flex flex-column justify-content-start align-items-center "
+                    style="width: 50%; height: 100%;">
+                    <div class="d-flex flex-column justify-content-end align-items-start p-2"
+                        style="width: 50%; height: 70%;">
+                        <span class="text-white fs-1 titulo">Villa Miyabi</span>
+                        <span class="text-white fs-2 titulo">Cascada de Camoján</span>
+                        <span class="text-white fs-1 titulo">22.000.000€</span>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start align-items-center"
+                        style="width: 100%; height: 30%;margin-left: 52%;">
+                        <a href="" class="btn-rojo me-3">View Property</a>
+                        <a href="" class="btn-beige ">Full Collection</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- CARRUSEL -->
+        <div id="divCarrusel" class="d-flex flex-row justify-content-start align-items-center w-100"
+            style="height: 70vh; margin-top: 8%;margin-bottom: 8%;">
+
+            <div class="d-flex flex-column justify-content-start align-items-center bg-beige pt-5"
+                style="width: 40%;height: 70vh;">
+
+                <div class="d-flex flex-column justify-content-start align-items-start mb-1 mt-5" style="width: 60%;">
+                    <p class="titulo fs-1">Engel & Völkers Marbella Exclusive Developments</p>
+                </div>
+
+                <div class="d-flex flex-column justify-content-start align-items-start mb-3" style="width: 60%;">
+                    <p class=" fs-4" style="color: rgb(174, 174, 174);font-weight: 600">BUILT FOR DISTINCTION</p>
+                </div>
+
+                <div class="d-flex flex-column justify-content-start align-items-start mb-3" style="width: 60%;">
+                    <p>Explore the finest selection of Engel & Völkers Marbella's exclusive new developments, each
+                        capturing the essence of modern luxury in the heart of Marbella.</p>
+                </div>
+
+                <div class="d-flex flex-column justify-content-start align-items-start" style="width: 60%;">
+                    <a href="" class="btn-beige mx-1 px-5" style="border:1px solid black">All New Developments</a>
+                </div>
+
+            </div>
+
+            <div id="divCards" class="d-flex flex-row justify-content-start align-items-center"
+                style="width: 60%;height: 60vh;">
+
+                <div class="cardDevelopment me-4 d-flex flex-row justify-content-start align-items-end"
+                    style="height: 60vh; width: 30%; background-image: url('./img/virrey.png'); background-size: cover;">
+                    <div class="d-flex flex-column justify-content-end align-items-start ps-3 text-white"
+                        style="height: 30%; width: 100%;">
+                        <p></p>
+                        <p>Golden Mile <br> <b>VIRREY VILLAS</b></p>
+                        <p>Prices from 3.500.000€</p>
+                    </div>
+                </div>
+
+                <div class="cardDevelopment me-4 d-flex flex-row justify-content-start align-items-end"
+                    style="height: 60vh; width: 30%; background-image: url('./img/camojan.png'); background-size: cover;">
+                    <div class="d-flex flex-column justify-content-end align-items-start ps-3 text-white"
+                        style="height: 30%; width: 100%;">
+                        <p></p>
+                        <p>Cascada de Camoján <br> <b>THE COLLECTION CAMOJAN</b></p>
+                        <p>Prices from 2.400.000€</p>
+                    </div>
+                </div>
+
+                <div class="cardDevelopment me-4 d-flex flex-row justify-content-start align-items-end"
+                    style="height: 60vh; width: 30%; background-image: url('./img/gallery.png'); background-size: cover;">
+                    <div class="d-flex flex-column justify-content-end align-items-start ps-3 text-white"
+                        style="height: 30%; width: 100%;">
+                        <p></p>
+                        <p>Palo Alto <br> <b>THE GALLERY</b></p>
+                        <p>Prices from 2.700.000€</p>
+                    </div>
+                </div>
+
+                <div class="cardDevelopment me-4 d-flex flex-row justify-content-start align-items-end"
+                    style="height: 60vh; width: 30%; background-image: url('./img/benalus.png'); background-size: cover;">
+                    <div class="d-flex flex-column justify-content-end align-items-start ps-3 text-white"
+                        style="height: 30%; width: 100%;">
+                        <p></p>
+                        <p>Golden Mile <br> <b>BENALÚS</b></p>
+                        <p>Prices from 2.900.000€</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- TEAM -->
+        <div id="divTeam" class="d-flex flex-column justify-content-start align-items-center w-100"
+            style="background-image: url('./img/SmadarTeam.png'); background-size: cover;background-repeat: no-repeat; height: 100vh;">
+
+            <div class="d-flex flex-column justify-content-start align-items-center w-100 pt-5" style="height: 50%;">
+                <div class="d-flex flex-row justify-content-center align-items-center w-100 text-white">
+                    <p class="fs-1 titulo">The Team</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center align-items-center w-100 text-white">
+                    <p class="fs-5 subtitulo">AT ENGEL & VÖLKERS</p>
+                </div>
+            </div>
+
+            <div id="divTextTeam" class="d-flex flex-column justify-content-start align-items-start w-100"
+                style="height: 50%;">
+                <div class="d-flex flex-column justify-content-start align-items-center "
+                    style="width: 50%; height: 100%;">
+                    <div class="d-flex flex-column justify-content-end align-items-center p-2"
+                        style="width: 50%; height: 70%;">
+                        <p class="text-white fs-5 subtitulo">The biggest sales force in the luxury real estate market in
+                            Marbella, the only one with 6 shops all over.</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start align-items-center"
+                        style="width: 50%; height: 30%;">
+                        <a href="" class="btn-rojo mx-1 px-5">Meet Us</a>
+                        <a href="" class="btn-beige mx-1 px-5">Our Shops</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Unveiling Excellence-->
+        <div id="divUnveiling" class="d-flex flex-wrap flex-row justify-content-around align-items-center w-100"
+            style="height: 100vh;margin-top: 8%;margin-bottom: 5%;">
+
+            <div class="d-flex flex-wrap flex-row justify-content-end align-items-end"
+                style="width: 50%;height: 100vh;">
+                <img id="imgUnveiling" src="./img/Unveiling.png" style="background-size: cover;height: 100%;">
+            </div>
+
+            <div class="d-flex flex-wrap flex-column justify-content-start align-items-start"
+                style="width: 45%;height: 100vh;">
+                <div id="tituloUnveiling" class="d-flex flex-wrap flex-column justify-content-start align-items-start mt-5"
+                    style="width: 80%; margin-left: -30%;">
+                    <p class="titulo fs-1">Unveiling Excellence in Marbella Luxury Real Estate</p>
+                </div>
+                <div class="d-flex flex-wrap flex-column justify-content-start align-items-start" style="width: 50%;">
+                    <p class="fs-4 mt-3 mb-5" style="font-weight: 600;color: rgb(174, 174, 174);"> SUCCESS SPEAKS LOUDER
+                        THAN WORDS</p>
+                    <p>Our record of real results in Marbella's competitive high-end market is unmatched and outperforms
+                        our closest competitors. How do we sell almost one property per day? With the perfect blend of
+                        global brand prestige, local insider expertise and innovative marketing strategies led by our
+                        skilled in-house team, we ensure maximum exposure for your property both online and offline. We
+                        stay ahead in the industry through our agility and consistent integration of the latest
+                        technology, and our tailored approach and worldwide visibility offer a unique and unparalleled
+                        service experience.</p><br>
+                </div>
+                <div id="buttonUnveiling" class="d-flex flex-wrap flex-column justify-content-start align-items-start"
+                    style="height: 28.6%;">
+                    <a href="" class="btn-rojo px-5 py-2">Discover how!</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- PROPERTIES -->
+        <div id="divProperties" class="d-flex flex-wrap flex-column justify-content-start align-items-center"
+            style="width: 100%;height: 102vh;">
+
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                <p class="fs-1 titulo mt-4">Marbella Top Properties</p>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center">
+                <p class="fs-5 subtitulo text-secondary">BUILT FOR DISTINCTION</p>
+            </div>
+            <div class="d-flex flex-wrap flex-column justify-content-center align-items-center" style="width: 65%;">
+                <p class="subtitulo text-center">Discover a world of luxury and modern living with Engel & Völkers
+                    Marbella's exclusive portfolio. Our real estate offerings in Marbella encompass the epitome of
+                    sophistication, showcasing exclusive properties that redefine upscale living. Explore the finest
+                    selection of new developments, each capturing the essence of modern luxury in the heart of Marbella.
+                </p>
+            </div>
+
+            <div class="d-flex flex-wrap flex-row justify-content-around align-items-center mt-4"
+                style="width: 100%;overflow-x:hidden;">
+
+
+                <div id="seQueda" class="bg-beige d-flex flex-wrap flex-column justify-content-start align-items-start pt-1"
+                    style="width: 30%; height: 35rem; ">
+
+                    <div class="d-flex flex-wrap flex-row justify-content-center align-items-start"
+                        style="width: 100%;height: 50%;">
+                        <img src="./img/property3.png" alt="">
+                    </div>
+                    <div class="mt-4" style="width: 100%;">
+                        <p class="mt-2 ms-3 subtitulo">Golden Mile · E&V ID: W-02T7YU</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 titulo fs-5">Exquisite Villa in exclusive gated community in a prime location</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">Indulge in refined living within these exquisite first floor
+                            apartments. Positioned centrally within the building, these one-floor residences exude
+                            elegance and sophistication.</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">6.250.000 €</p>
+                    </div>
+                </div>
+
+                <div id="desapareceProperty" class="bg-beige d-flex flex-wrap flex-column justify-content-start align-items-start pt-1"
+                    style="width: 30%; height: 35rem; ">
+
+                    <div class="d-flex flex-wrap flex-row justify-content-center align-items-start"
+                        style="width: 100%;height: 50%;">
+                        <img src="./img/property1.png" alt="">
+                    </div>
+                    <div class="mt-4" style="width: 100%;">
+                        <p class="mt-2 ms-3 subtitulo">Golden Mile · E&V ID: W-02T7YU</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 titulo fs-5">Exquisite Villa in exclusive gated community in a prime location</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">Indulge in refined living within these exquisite first floor
+                            apartments. Positioned centrally within the building, these one-floor residences exude
+                            elegance and sophistication.</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">6.250.000 €</p>
+                    </div>
+                </div>
+
+
+                <div id="desapareceProperty2" class="desapareceProperty bg-beige d-flex flex-wrap flex-column justify-content-start align-items-start pt-1"
+                    style="width: 30%; height: 35rem; ">
+
+                    <div class="d-flex flex-wrap flex-row justify-content-center align-items-start"
+                        style="width: 100%;height: 50%;">
+                        <img src="./img/property2.png" alt="">
+                    </div>
+                    <div class="mt-4" style="width: 100%;">
+                        <p class="mt-2 ms-3 subtitulo">Golden Mile · E&V ID: W-02T7YU</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 titulo fs-5">Exquisite Villa in exclusive gated community in a prime location</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">Indulge in refined living within these exquisite first floor
+                            apartments. Positioned centrally within the building, these one-floor residences exude
+                            elegance and sophistication.</p>
+                    </div>
+                    <div class="" style="width: 100%;">
+                        <p class="ms-3 subtitulo">6.250.000 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="" class="btn-rojo px-5 py-2 mt-4">All properties</a>
+
+
+        </div>
+
+
+        <!-- BLOGS -->
+        <div id="divBlog" class="d-flex flex-wrap flex-row justify-content-center align-items-center"
+            style="height: 80vh;width: 100%;margin-top: 5%;">
+
+            <div id="tituloBlog" class="d-flex flex-wrap flex-column justify-content-center align-items-center mb-3"
+                style="width: 66%;">
+                <span class="fs-1 titulo">We are beyond residential</span><br>
+                <span class="fs-5 subtitulo text-secondary">BLOGS & NEWS</span>
+            </div>
+
+            <div id="div2Blog" class="d-flex flex-wrap flex-column justify-content-between align-items-center"
+                style="width: 66%;height: 80vh;">
+
+
+                <div id="subDivBlog" class="d-flex flex-wrap flex-column justify-content-center align-items-center bg-secondary"
+                    style="width: 67.5%;height: 80vh;">
+
+                    <div class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                        style="width: 50%; height: 80vh; background-image: url('./img/blog.png'); background-size: cover;">
+                    </div>
+
+                    <div class="d-flex flex-wrap flex-column justify-content-center align-items-center bg-beige"
+                        style="width: 50%; height: 80vh;">
+                        <div class="d-flex flex-wrap flex-column justify-content-end align-items-end"
+                            style="width: 80%; height: 33%;">
+                            <p class="titulo fs-2">Support people in fulfilling their dreams</p>
+                        </div>
+                        <div class="d-flex flex-wrap flex-column justify-content-start align-items-end"
+                            style="width: 80%; height: 33%;">
+                            <p id="textBlog">Ecupta conector acerumq uatquuntibus sequam audaecus autetum re volupta tquodipsunt dolor
+                                acepudam ea volupta conector acerumq uatquuntibus sequam.Ecupta conector acerumq
+                                uatquuntibus sequam audaecus autetum re volupta tquodipsunt dolor acepudam ea volupta
+                                conector acerumq uatquuntibus sequam.</p>
+                        </div>
+                        <div class="d-flex flex-wrap flex-column justify-content-end align-items-start"
+                            style="width: 80%; height: 33%;">
+                            <p class="text-secondary">E&V <b class="text-red">·</b> 5 min read <b class="text-red">·</b>
+                                26 jun</b></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="divMiniBlogs" class="d-flex flex-wrap flex-row justify-content-center align-items-start"
+                    style="width: 30%;height: 80vh;">
+
+                    <div class="cardDevelopment flex-wrap flex-row justify-content-start align-items-start"
+                        style="background-image: url('./img/blog1.png'); width: 100%; height: 32%; background-size: cover;">
+                        <p class="ms-4 mt-3 fs-4 titulo text-white" style="width: 80%;">Support people in fulfilling their dreams</p>
+                        <p class="ms-4 mt-3 text-white">E&V <b class="text-red">·</b> 5 min read <b
+                                class="text-red">·</b> 26 jun</b></p>
+                    </div>
+
+                    <div class="cardDevelopment flex-wrap flex-row justify-content-start align-items-start"
+                        style="background-image: url('./img/blog2.png'); width: 100%; height: 32%; background-size: cover;margin-top:4%">
+                        <p class="ms-4 mt-3 fs-4 titulo text-white" style="width: 80%;">Support people in fulfilling their dreams</p>
+                        <p class="ms-4 mt-3 text-white">E&V <b class="text-red">·</b> 5 min read <b
+                                class="text-red">·</b> 26 jun</b></p>
+                    </div>
+
+                    <div class="cardDevelopment flex-wrap flex-row justify-content-start align-items-start"
+                        style="background-image: url('./img/blog3.png'); width: 100%; height: 32%; background-size: cover;margin-top:4%">
+                        <p class="ms-4 mt-3 fs-4 titulo text-white" style="width: 80%;">Support people in fulfilling their dreams</p>
+                        <p class="ms-4 mt-3 text-white">E&V <b class="text-red">·</b> 5 min read <b
+                                class="text-red">·</b> 26 jun</b></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="" class="btn-beige px-5 py-2" style="border: 1px solid black;margin-top: 10%;">See all articles</a>
+
+
+        <!-- NEWSLETTER -->
+        <div id="divNews" class="d-flex flex-wrap flex-column justify-content-center align-items-center mb-5"
+            style="margin-top: 5%;width: 60%;">
+            <div style="width: 100%;">
+                <p class="titulo fs-2 text-center">Receive our Property News</p>
+            </div>
+            <div style="width: 40%;">
+                <p class="subtitulo text-center">70% of the properties are sold to registered search clients. Register
+                    here and receive our offers first.</p>
+            </div>
+            <div id="email" class="d-flex flex-wrap flex-row justify-content-start align-items-center"
+                style="width: 40%;height: 4rem;background-color: rgb(226, 225, 225);">
+                <div class="d-flex flex-wrap flex-row justify-content-start align-items-center"
+                    style="width: 85%;height: 100%;">
+                    <p class="ms-4 mt-3">Enter your email</p>
+                </div>
+                <div class="bg-black d-flex flex-wrap flex-row justify-content-center align-items-center"
+                    style="width: 15%;height: 100%;">
+                    <i class="bi bi-send text-white fs-3"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <div id="divFooter" class="d-flex flex-wrap flex-column justify-content-between align-items-center bg-beige"
+            style="margin-top: 2%;width: 100%;height: 50vh;">
+
+            <div id="divFlexFooter" class="d-flex flex-wrap flex-row justify-content-between align-items-center"
+                style="width: 80%;height: 85%;">
+                <div class="d-flex flex-wrap flex-column justify-content-start align-items-center"
+                    style="width: 50%;height: 100%;">
+                    <div class="mt-5 " style="width: 86%;height: 20%;">
+                        <img id="logoFooter" src="./img/EV_Logo_RGB.png" style="width: 50%;">
+                    </div>
+                    <div id="textFooter" style="width: 80%;height: 20%;">
+                        <p class="subtitulo" style="width: 65%;">The Leading Luxury Real Estate in Marbella with an
+                            stunning portfolio of high-end villas, apartments and penthouses for sale and rent in
+                            Marbella</p>
+                    </div>
+                    <div id="movilFooter" class="mt-3" style="width: 80%;height: 15%;">
+                        <p class="fs-4 subtitulo"><i class="bi bi-telephone"></i> +34 952 868 406</p>
+                    </div>
+                    <div id="emailFooter" style="width: 80%;height: 15%;">
+                        <p class="fs-4 subtitulo"><i class="bi bi-envelope"></i> marbella@engelvoelkers.com</p>
+                    </div>
+                </div>
+
+                <div id="divSubMenuFooter" class="d-flex flex-wrap flex-row justify-content-start align-items-center"
+                    style="width: 50%;height: 100%;">
+                    <div class="text-center mt-5" style="width: 30%;height: 100%;">
+                        <p class="titulo fs-5 fw-bold">Menu</p>
+                        <span class="text-secondary subtitulo">Home <br> Properties <br> The Luxury Collection <br> Our
+                            Services <br> Guides <br> About us <br> Contact</span>
+                    </div>
+                    <div id="OurShops" class="text-center mt-5" style="width: 30%;height: 100%;">
+                        <p class="titulo fs-5 fw-bold">Our 6 Shops</p>
+                        <span class="text-secondary subtitulo">Golden Mile <br> Marbella Club <br> Puerto Banús <br> El
+                            Rosario <br> Elviria <br> Guadalmina</span>
+                    </div>
+                    <div id="areasFooter" class="text-center mt-5" style="width: 30%;height: 100%;">
+                        <p class="titulo fs-5 fw-bold">Top Areas</p>
+                        <span class="text-secondary subtitulo">Sierra Blanca <br> Puerto Banús <br> Cascada de Camoján
+                            <br> La Zagaleta <br> Los Monteros <br> Elviria</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="oscuroFooter" class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                style="width: 100%;height: 15%;background-color: #DCD9D4;">
+                <div class="d-flex flex-wrap flex-row justify-content-between align-items-center"
+                    style="width: 80%;height: 100%;">
+                    <div class="d-flex flex-wrap flex-column justify-content-center align-items-start"
+                        style="width: 80%;height: 100%;">
+                        <p class="mt-3 subtitulo" style="margin-left: 6%;">© 2023 Engel & Völkers Marbella · Website use
+                            terms and conditions · Cookies Policy · designed and built by inmoba.com</p>
+                    </div>
+                    <div id="redes" class="d-flex flex-wrap flex-column justify-content-center align-items-center"
+                        style="width: 20%;height: 100%;">
+                        <p class="mt-3 fs-3 subtitulo"><i class="bi bi-youtube"></i>+15K </p>
+                        <p class="mt-3 fs-3 subtitulo"><i class="bi bi-instagram"></i>+15K </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("sidebar").addEventListener("click", abrirMenu);
+        var menu = document.getElementById("menu");
+        var cerrarMenu = document.getElementById("cerrarMenu").addEventListener("click", cerrarMenu);
+        var background = document.getElementById("background");
+
+        function abrirMenu() {
+            menu.style.display = "flex";
+            document.body.style.overflow = 'hidden';
+        }
+
+        function cerrarMenu() {
+            menu.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleSubMenu(subMenuId) {
+    var subMenu = document.getElementById(subMenuId);
+    if (subMenu.style.display === 'block') {
+        subMenu.style.display = 'none';
+    } else {
+        subMenu.style.display = 'block';
+    }
+}
+
+    </script>
+
+</body>
+
+</html>
